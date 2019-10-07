@@ -12,16 +12,60 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/restaurante">
+
+            </ImageView>
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/nombrerestaurante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La mazorca"
+                android:textAlignment="center">
+            </TextView>
+            <TextView
+                android:id="@+id/descripcionrestaurante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción del restaurante"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp">
 
+            </TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/nolike"
+                android:layout_weight="0.33"
+                android:layout_padding="10dp">
+            </CheckBox>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ubicacion"
+                android:layout_weight="0.33">
 
+            </ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/compartir"
+                android:layout_weight="0.33">
+
+            </ImageView>
         </LinearLayout>
 
     </LinearLayout>
