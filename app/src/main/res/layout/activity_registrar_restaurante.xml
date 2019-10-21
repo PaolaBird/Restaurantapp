@@ -8,16 +8,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:layout_gravity="center">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src=""
                 android:id="@+id/imagen">
 
             </ImageView>
@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtdescripcion"/><!--para ocultar lo que se escribe-->
-
+            </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,10 +61,10 @@
 
             </com.google.android.material.textfield.TextInputLayout>
             <Button
-                android:id="@+id/buttoniniciar"
+                android:id="@+id/guardar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/iniciarsesion"
+                android:text="@string/guardar"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@color/primaryColor"

@@ -1,7 +1,7 @@
 package com.example.restaurante.modelo;
 
 public class Restaurante {
-    private String restaurante;
+    private String id;
     private String nombre;
     private String descripcion;
     private double longitud;
@@ -11,8 +11,8 @@ public class Restaurante {
     public Restaurante() {
     }
 
-    public Restaurante(String restaurante, String nombre, String descripcion, double longitud, double latitud, int like) {
-        this.restaurante = restaurante;
+    public Restaurante(String id, String nombre, String descripcion, double longitud, double latitud, int like) {
+        this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.longitud = longitud;
@@ -20,12 +20,12 @@ public class Restaurante {
         this.like = like;
     }
 
-    public String getRestaurante() {
-        return restaurante;
+    public String getId() {
+        return id;
     }
 
-    public void setRestaurante(String restaurante) {
-        this.restaurante = restaurante;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

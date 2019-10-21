@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void iniciarSesion(String email, String password){
+    public void iniciarSesion( final String email, final String password){
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -68,10 +68,13 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
+                            System.out.println(email);
+                            System.out.println(password);
                             Toast.makeText(MainActivity.this, "Haz iniciado sesion",
                                     Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+                            irContenedor();
 
 
                         } else {
@@ -87,10 +90,16 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    private void irContenedor() {
+        Intent intent = new Intent(this, ContenedorActivity.class);
+        startActivity(intent);
+    }
+
     public void crearUsuario(View view){
         Intent intent = new Intent(this, NuevoUsuarioActivity.class);
         startActivity(intent);
     }
+
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
