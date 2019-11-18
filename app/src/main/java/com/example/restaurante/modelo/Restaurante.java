@@ -7,17 +7,19 @@ public class Restaurante {
     private double longitud;
     private double latitud;
     private int like;
+    private String imagen;
 
     public Restaurante() {
     }
 
-    public Restaurante(String id, String nombre, String descripcion, double longitud, double latitud, int like) {
+    public Restaurante(String id, String nombre, String descripcion, double longitud, double latitud, int like, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.longitud = longitud;
         this.latitud = latitud;
         this.like = like;
+        this.imagen = imagen;
     }
 
     public String getId() {
@@ -67,4 +69,8 @@ public class Restaurante {
     public void setLike(int like) {
         this.like = like;
     }
+
+    public String getImagen() { return imagen; }
+
+    public void setImagen(String imagen) { this.imagen = imagen; }
 }
